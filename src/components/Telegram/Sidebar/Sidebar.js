@@ -3,6 +3,7 @@ import "./Sidebar.css";
 import SearchIcon from '@material-ui/icons/Search';
 import BorderColorOutlinedIcon from '@material-ui/icons/BorderColorOutlined';
 import {IconButton} from "@material-ui/core";
+import SidebarThread from './SidebarThread/SidebarThread';
 
 const Sidebar = () => {
     return (
@@ -17,7 +18,7 @@ const Sidebar = () => {
                     </IconButton>
             </div>
             <div className="sidebar__threads">
-                Threads
+               <SidebarThread />
             </div>
             <div className="sidebar__bottom"></div>
         </div>
