@@ -1,4 +1,4 @@
-# telegram web app clone
+# Telegram Web app Clone
 
 ### Reactjs and Redux
 
