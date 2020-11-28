@@ -1,9 +1,11 @@
 import React from 'react';
+import Sidebar from './Sidebar/Sidebar';
+import "./Telegram.css";
 
 const Telegram = () => {
     return (
         <div className="telegram">
-           <h2>Telegram clone</h2> 
+          <Sidebar />
         </div>
     );
 };
