@@ -6,9 +6,11 @@ const SidebarThread = () => {
     return (
         <div className="sidebarThread">
         <Avatar />
+        <div className="sidebarThread__details">
         <h3>Thrad Name</h3>
         <p>Info</p>
-        <small>timestamp</small>
+        <small className="sidebarThread__timestamp">timestamp</small>
+        </div>
         </div>
     );
 };

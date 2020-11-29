@@ -2,8 +2,11 @@ import React from 'react';
 import "./Sidebar.css";
 import SearchIcon from '@material-ui/icons/Search';
 import BorderColorOutlinedIcon from '@material-ui/icons/BorderColorOutlined';
-import {IconButton} from "@material-ui/core";
+import {Avatar, IconButton} from "@material-ui/core";
 import SidebarThread from './SidebarThread/SidebarThread';
+import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
+import QuestionAnswerOutlinedIcon from '@material-ui/icons/QuestionAnswerOutlined';
+import {Settings} from "@material-ui/icons";
 
 const Sidebar = () => {
     return (
@@ -20,7 +23,18 @@ const Sidebar = () => {
             <div className="sidebar__threads">
                <SidebarThread />
             </div>
-            <div className="sidebar__bottom"></div>
+            <div className="sidebar__bottom">
+                <Avatar className="sidebar__bottom__avatar" />
+                <IconButton>
+                    <PhoneOutlinedIcon />
+                </IconButton>
+                <IconButton>
+                    <QuestionAnswerOutlinedIcon />
+                </IconButton>
+                <IconButton>
+                    <Settings />
+                </IconButton>
+            </div>
         </div>
     );
 };
