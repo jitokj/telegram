@@ -38,3 +38,7 @@
 .thread__header__details:hover {
   color: rgb(2, 150, 199);
 }
+
+.thread__input > input {
+  outline: none;
+}
