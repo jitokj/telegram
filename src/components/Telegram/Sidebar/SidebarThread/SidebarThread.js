@@ -4,6 +4,7 @@ import "./SidebarThread.css";
 import db from "../../../../firebase";
 import { useDispatch } from 'react-redux';
 import {setThread} from "../../../../features/threadSlice";
+import * as timeago from 'timeago.js';
 
 const SidebarThread = ({id,threadName}) => {
     const dispatch = useDispatch();
@@ -25,7 +26,8 @@ const SidebarThread = ({id,threadName}) => {
         <div className="sidebarThread__details">
         <h3>{threadName}</h3>
         <p>{threadInfo[0]?.message}</p>
-        <small className="sidebarThread__timestamp">timestamp</small>
+        <small className="sidebarThread__timestamp">
+        { timeago.format(new Date(threadInfo[0]?.timestamp?.toDate()))}</small>
         </div>
         </div>
     );
