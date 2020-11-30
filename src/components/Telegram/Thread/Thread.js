@@ -21,7 +21,7 @@ const Thread = () => {
 
   useEffect(()=>{
       if(threadId){
-          db.collection('threads').collection('messages').orderBy('timestamp','desc').onSnapshot((snapshot)=>
+          db.collection('threads').doc(threadId).collection('messages').orderBy('timestamp','desc').onSnapshot((snapshot)=>
           setMessages(snapshot.docs.map((doc)=>({
               id:doc.id,
               data: doc.data()
