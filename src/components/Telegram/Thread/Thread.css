@@ -24,6 +24,9 @@
 
 .thread__header__contents__info {
   padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
 }
 
 .thread__header__contents__info > h5 {
