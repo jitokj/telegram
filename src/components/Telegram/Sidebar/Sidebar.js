@@ -14,6 +14,7 @@ import { selectUser } from '../../../features/userSlice';
 const Sidebar = () => {
     const user = useSelector(selectUser);
     const [threads,setThreads] = useState([]);
+
     useEffect(()=>{
         db.collection("threads").onSnapshot((snapshot)=>setThreads(snapshot.docs.map(doc=>({
             id: doc.id,
@@ -46,7 +47,7 @@ const Sidebar = () => {
               ))}
             </div>
             <div className="sidebar__bottom">
-                <Avatar className="sidebar__bottom__avatar" onClick={()=>{auth.signOut()}} />
+                <Avatar  src={user.photo} className="sidebar__bottom__avatar" onClick={()=>{auth.signOut()}} />
                 <IconButton>
                     <PhoneOutlinedIcon />
                 </IconButton>
