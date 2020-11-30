@@ -5,6 +5,7 @@
 - material -ui
 - self destructing messages
 - firestore
+- Google authentication and sign-in
 
 * snapshot of web app
   - login page
