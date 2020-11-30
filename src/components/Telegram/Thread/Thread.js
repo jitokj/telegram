@@ -35,14 +35,14 @@ const Thread = () => {
     const sendMessage = (e)=>{
         e.preventDefault();
         handleTimeOut(input,user.uid);
-       db.collection("threads").doc(threadId).collection('messages'.add({
+       db.collection("threads").doc(threadId).collection('messages').add({
            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
            message: input,
            uid: user.uid,
            photo: user.photo,
            email: user.email,
            displayName: user.displayName
-           }))
+           })
         setInput("");
     }
 
