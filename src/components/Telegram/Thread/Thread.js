@@ -26,8 +26,10 @@ const Thread = () => {
          </div>
          <div className="thread__messages"></div>
          <div className="thread__input">
+         <form>
              <input type="text" value={input} onChange={(e)=>{setInput(e.target.value)}} placeholder="write a message..." />
              <button onClick={sendMessage}>Send</button>
+             </form>
          </div>
         </div>
     );
